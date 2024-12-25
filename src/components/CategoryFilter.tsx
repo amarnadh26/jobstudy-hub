@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 
-type Category = "all" | "jobs" | "study" | "roadmaps";
+type Category = "all" | "it-jobs" | "non-it-jobs" | "study" | "roadmaps";
 
 interface CategoryFilterProps {
   activeCategory: Category;
@@ -20,10 +20,16 @@ export const CategoryFilter = ({
         All Posts
       </Button>
       <Button
-        variant={activeCategory === "jobs" ? "default" : "outline"}
-        onClick={() => onCategoryChange("jobs")}
+        variant={activeCategory === "it-jobs" ? "default" : "outline"}
+        onClick={() => onCategoryChange("it-jobs")}
       >
-        Job Postings
+        IT Jobs
+      </Button>
+      <Button
+        variant={activeCategory === "non-it-jobs" ? "default" : "outline"}
+        onClick={() => onCategoryChange("non-it-jobs")}
+      >
+        Non-IT Jobs
       </Button>
       <Button
         variant={activeCategory === "study" ? "default" : "outline"}

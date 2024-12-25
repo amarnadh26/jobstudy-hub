@@ -4,7 +4,7 @@ import { FeaturedSection } from "@/components/FeaturedSection";
 import { CategoryFilter } from "@/components/CategoryFilter";
 import { BlogCard } from "@/components/BlogCard";
 
-type Category = "all" | "jobs" | "study" | "roadmaps";
+type Category = "all" | "it-jobs" | "non-it-jobs" | "study" | "roadmaps";
 
 const Index = () => {
   const [activeCategory, setActiveCategory] = useState<Category>("all");
@@ -13,8 +13,29 @@ const Index = () => {
     {
       title: "Senior React Developer Position at Tech Corp",
       excerpt: "Exciting opportunity for a senior React developer to join our growing team...",
-      category: "jobs",
+      category: "it-jobs",
       date: "Mar 1, 2024",
+      readTime: "3",
+    },
+    {
+      title: "HR Manager Position at Global Corp",
+      excerpt: "Looking for an experienced HR Manager to lead our talent acquisition team...",
+      category: "non-it-jobs",
+      date: "Mar 2, 2024",
+      readTime: "4",
+    },
+    {
+      title: "Marketing Director - Tech Industry",
+      excerpt: "Join our marketing team to lead brand strategy and growth initiatives...",
+      category: "non-it-jobs",
+      date: "Mar 1, 2024",
+      readTime: "5",
+    },
+    {
+      title: "DevOps Engineer - Cloud Infrastructure",
+      excerpt: "Join our cloud team to build and maintain scalable infrastructure...",
+      category: "it-jobs",
+      date: "Feb 29, 2024",
       readTime: "3",
     },
     {
