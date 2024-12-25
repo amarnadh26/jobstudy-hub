@@ -36,6 +36,12 @@ export default {
           DEFAULT: "#D946EF",
           foreground: "#FFFFFF",
         },
+        neon: {
+          orange: {
+            soft: "#FEC6A1",
+            bright: "#F97316",
+          },
+        },
       },
       keyframes: {
         "fade-up": {
