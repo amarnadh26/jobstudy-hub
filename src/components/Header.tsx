@@ -19,7 +19,7 @@ const ListItem = ({
   className?: string;
   title: string;
   children: React.ReactNode;
-  href: string;
+  to: string;  // Changed from href to to
 }) => {
   return (
     <li>
@@ -55,16 +55,16 @@ export const Header = () => {
               <NavigationMenuTrigger>Jobs</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2">
-                  <ListItem href="/jobs/it" title="IT Jobs">
+                  <ListItem to="/jobs/it" title="IT Jobs">
                     Browse technology and software development positions
                   </ListItem>
-                  <ListItem href="/jobs/non-it" title="Non-IT Jobs">
+                  <ListItem to="/jobs/non-it" title="Non-IT Jobs">
                     Explore non-technical career opportunities
                   </ListItem>
-                  <ListItem href="/jobs/remote" title="Remote Jobs">
+                  <ListItem to="/jobs/remote" title="Remote Jobs">
                     Find remote work opportunities worldwide
                   </ListItem>
-                  <ListItem href="/jobs/internships" title="Internships">
+                  <ListItem to="/jobs/internships" title="Internships">
                     Start your career with internship positions
                   </ListItem>
                 </ul>
@@ -75,13 +75,13 @@ export const Header = () => {
               <NavigationMenuTrigger>Roadmaps</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2">
-                  <ListItem href="/roadmaps/it" title="IT Career Roadmaps">
+                  <ListItem to="/roadmaps/it" title="IT Career Roadmaps">
                     Career paths for Python, Java, and more
                   </ListItem>
-                  <ListItem href="/roadmaps/non-it" title="Non-IT Career Roadmaps">
+                  <ListItem to="/roadmaps/non-it" title="Non-IT Career Roadmaps">
                     Guide for non-technical career progression
                   </ListItem>
-                  <ListItem href="/roadmaps/beginner" title="Beginner Guides">
+                  <ListItem to="/roadmaps/beginner" title="Beginner Guides">
                     Start your career journey here
                   </ListItem>
                 </ul>
@@ -92,13 +92,13 @@ export const Header = () => {
               <NavigationMenuTrigger>News</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2">
-                  <ListItem href="/news/it" title="IT Industry Updates">
+                  <ListItem to="/news/it" title="IT Industry Updates">
                     Latest technology industry news
                   </ListItem>
-                  <ListItem href="/news/trends" title="Tech Trends">
+                  <ListItem to="/news/trends" title="Tech Trends">
                     Emerging technology trends
                   </ListItem>
-                  <ListItem href="/news/non-it" title="Non-IT Market News">
+                  <ListItem to="/news/non-it" title="Non-IT Market News">
                     Updates from non-technical sectors
                   </ListItem>
                 </ul>
@@ -109,16 +109,16 @@ export const Header = () => {
               <NavigationMenuTrigger>Resources</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2">
-                  <ListItem href="/resources/study" title="Study Materials">
+                  <ListItem to="/resources/study" title="Study Materials">
                     Learning resources and guides
                   </ListItem>
-                  <ListItem href="/resources/interview" title="Interview Preparation">
+                  <ListItem to="/resources/interview" title="Interview Preparation">
                     Prepare for your next interview
                   </ListItem>
-                  <ListItem href="/resources/certifications" title="Certifications">
+                  <ListItem to="/resources/certifications" title="Certifications">
                     Professional certification guides
                   </ListItem>
-                  <ListItem href="/resources/tutorials" title="Tutorials">
+                  <ListItem to="/resources/tutorials" title="Tutorials">
                     Step-by-step learning guides
                   </ListItem>
                 </ul>
@@ -129,13 +129,13 @@ export const Header = () => {
               <NavigationMenuTrigger>Tools</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2">
-                  <ListItem href="/tools/resume" title="Resume Builder">
+                  <ListItem to="/tools/resume" title="Resume Builder">
                     Create professional resumes
                   </ListItem>
-                  <ListItem href="/tools/assessment" title="Skill Assessment">
+                  <ListItem to="/tools/assessment" title="Skill Assessment">
                     Evaluate your technical skills
                   </ListItem>
-                  <ListItem href="/tools/tracker" title="Job Application Tracker">
+                  <ListItem to="/tools/tracker" title="Job Application Tracker">
                     Track your job applications
                   </ListItem>
                 </ul>
