@@ -55,6 +55,7 @@ const Index = () => {
   ];
 
   const trendingTopics = [
+    "📰 Latest Post: Top 10 IT Jobs in 2024",
     "Web3 Development 🚀",
     "AI/ML Engineering 🤖",
     "Remote Work Opportunities 🌍",
@@ -74,7 +75,7 @@ const Index = () => {
           <div className="flex gap-8 items-center text-white font-semibold px-4">
             {trendingTopics.map((topic, index) => (
               <span key={index} className="inline-flex items-center">
-                <span className="mr-2">🔥</span>
+                {!topic.startsWith("📰") && <span className="mr-2">🔥</span>}
                 {topic}
               </span>
             ))}
@@ -82,7 +83,7 @@ const Index = () => {
           <div className="flex gap-8 items-center text-white font-semibold px-4">
             {trendingTopics.map((topic, index) => (
               <span key={`duplicate-${index}`} className="inline-flex items-center">
-                <span className="mr-2">🔥</span>
+                {!topic.startsWith("📰") && <span className="mr-2">🔥</span>}
                 {topic}
               </span>
             ))}
