@@ -1,8 +1,8 @@
-import { useState } from "react";
 import { Header } from "@/components/Header";
 import { FeaturedSection } from "@/components/FeaturedSection";
 import { CategoryFilter } from "@/components/CategoryFilter";
 import { BlogCard } from "@/components/BlogCard";
+import { useState } from "react";
 
 type Category = "all" | "it-jobs" | "non-it-jobs" | "study" | "roadmaps";
 
@@ -11,46 +11,46 @@ const Index = () => {
 
   const posts = [
     {
-      title: "Senior React Developer Position at Tech Corp",
-      excerpt: "Exciting opportunity for a senior React developer to join our growing team...",
+      title: "Top 10 IT Jobs in 2024",
+      excerpt: "Discover the most in-demand tech roles and skills needed to succeed in today's market.",
       category: "it-jobs",
-      date: "Mar 1, 2024",
-      readTime: "3",
-    },
-    {
-      title: "HR Manager Position at Global Corp",
-      excerpt: "Looking for an experienced HR Manager to lead our talent acquisition team...",
-      category: "non-it-jobs",
-      date: "Mar 2, 2024",
-      readTime: "4",
-    },
-    {
-      title: "Marketing Director - Tech Industry",
-      excerpt: "Join our marketing team to lead brand strategy and growth initiatives...",
-      category: "non-it-jobs",
-      date: "Mar 1, 2024",
+      date: "Mar 15, 2024",
       readTime: "5",
     },
     {
-      title: "DevOps Engineer - Cloud Infrastructure",
-      excerpt: "Join our cloud team to build and maintain scalable infrastructure...",
-      category: "it-jobs",
-      date: "Feb 29, 2024",
-      readTime: "3",
-    },
-    {
-      title: "Complete Guide to Modern JavaScript",
-      excerpt: "Master JavaScript fundamentals and advanced concepts with this comprehensive guide...",
+      title: "Complete Guide to Python Development",
+      excerpt: "Master Python programming with this comprehensive guide for beginners and intermediates.",
       category: "study",
-      date: "Feb 28, 2024",
-      readTime: "15",
+      date: "Mar 14, 2024",
+      readTime: "10",
     },
     {
-      title: "Frontend Developer Career Path",
-      excerpt: "A detailed roadmap to becoming a professional frontend developer in 2024...",
+      title: "Marketing Career Roadmap",
+      excerpt: "Step-by-step guide to building a successful career in digital marketing.",
+      category: "non-it-jobs",
+      date: "Mar 13, 2024",
+      readTime: "7",
+    },
+    {
+      title: "Frontend Development Career Path",
+      excerpt: "Everything you need to know about becoming a frontend developer in 2024.",
       category: "roadmaps",
-      date: "Feb 27, 2024",
-      readTime: "10",
+      date: "Mar 12, 2024",
+      readTime: "8",
+    },
+    {
+      title: "Remote Work Best Practices",
+      excerpt: "Tips and tricks for succeeding in a remote work environment.",
+      category: "it-jobs",
+      date: "Mar 11, 2024",
+      readTime: "6",
+    },
+    {
+      title: "Interview Preparation Guide",
+      excerpt: "Comprehensive guide to ace your next tech interview.",
+      category: "study",
+      date: "Mar 10, 2024",
+      readTime: "12",
     },
   ];
 
@@ -59,16 +59,16 @@ const Index = () => {
     : posts.filter(post => post.category === activeCategory);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
       <Header />
-      <main className="pt-16">
+      <main className="pt-20">
         <FeaturedSection />
-        <div className="container mx-auto px-4 py-8">
+        <div className="container mx-auto px-4 py-12">
           <CategoryFilter
             activeCategory={activeCategory}
             onCategoryChange={setActiveCategory}
           />
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredPosts.map((post, index) => (
               <BlogCard key={index} {...post} />
             ))}
