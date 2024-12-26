@@ -67,6 +67,14 @@ const Index = () => {
     ? posts 
     : posts.filter(post => post.category === activeCategory);
 
+  const handleLatestPostClick = () => {
+    // Scroll to the first post in the grid
+    const postElements = document.querySelectorAll('.group');
+    if (postElements.length > 0) {
+      postElements[0].scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
       <Header />
@@ -74,7 +82,11 @@ const Index = () => {
         <div className="flex whitespace-nowrap animate-[scroll_20s_linear_infinite]">
           <div className="flex gap-8 items-center text-white font-semibold px-4">
             {trendingTopics.map((topic, index) => (
-              <span key={index} className="inline-flex items-center">
+              <span 
+                key={index} 
+                className={`inline-flex items-center ${topic.startsWith("📰") ? "cursor-pointer hover:text-white/80" : ""}`}
+                onClick={topic.startsWith("📰") ? handleLatestPostClick : undefined}
+              >
                 {!topic.startsWith("📰") && <span className="mr-2">🔥</span>}
                 {topic}
               </span>
@@ -82,7 +94,11 @@ const Index = () => {
           </div>
           <div className="flex gap-8 items-center text-white font-semibold px-4">
             {trendingTopics.map((topic, index) => (
-              <span key={`duplicate-${index}`} className="inline-flex items-center">
+              <span 
+                key={`duplicate-${index}`} 
+                className={`inline-flex items-center ${topic.startsWith("📰") ? "cursor-pointer hover:text-white/80" : ""}`}
+                onClick={topic.startsWith("📰") ? handleLatestPostClick : undefined}
+              >
                 {!topic.startsWith("📰") && <span className="mr-2">🔥</span>}
                 {topic}
               </span>
