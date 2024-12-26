@@ -54,6 +54,14 @@ export default {
             transform: "translateY(0)",
           },
         },
+        scroll: {
+          "0%": {
+            transform: "translateX(0)",
+          },
+          "100%": {
+            transform: "translateX(-50%)",
+          },
+        },
       },
       animation: {
         "fade-up": "fade-up 0.5s ease-out",

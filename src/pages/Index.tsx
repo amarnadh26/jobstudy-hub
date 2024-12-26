@@ -54,12 +54,40 @@ const Index = () => {
     },
   ];
 
+  const trendingTopics = [
+    "Web3 Development 🚀",
+    "AI/ML Engineering 🤖",
+    "Remote Work Opportunities 🌍",
+    "Cloud Computing Skills ☁️",
+    "DevOps Trends 🔄"
+  ];
+
   const filteredPosts = activeCategory === "all" 
     ? posts 
     : posts.filter(post => post.category === activeCategory);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
+      <div className="bg-neon-orange-bright overflow-hidden py-2 relative">
+        <div className="flex whitespace-nowrap animate-[scroll_20s_linear_infinite]">
+          <div className="flex gap-8 items-center text-white font-semibold px-4">
+            {trendingTopics.map((topic, index) => (
+              <span key={index} className="inline-flex items-center">
+                <span className="mr-2">🔥</span>
+                {topic}
+              </span>
+            ))}
+          </div>
+          <div className="flex gap-8 items-center text-white font-semibold px-4">
+            {trendingTopics.map((topic, index) => (
+              <span key={`duplicate-${index}`} className="inline-flex items-center">
+                <span className="mr-2">🔥</span>
+                {topic}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
       <Header />
       <main className="pt-20">
         <FeaturedSection />
