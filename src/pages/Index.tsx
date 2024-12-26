@@ -68,7 +68,8 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
-      <div className="bg-neon-orange-bright overflow-hidden py-2 relative">
+      <Header />
+      <div className="bg-neon-orange-bright overflow-hidden py-2 relative mt-[72px]">
         <div className="flex whitespace-nowrap animate-[scroll_20s_linear_infinite]">
           <div className="flex gap-8 items-center text-white font-semibold px-4">
             {trendingTopics.map((topic, index) => (
@@ -88,8 +89,7 @@ const Index = () => {
           </div>
         </div>
       </div>
-      <Header />
-      <main className="pt-20">
+      <main className="pt-8">
         <FeaturedSection />
         <div className="container mx-auto px-4 py-12">
           <CategoryFilter
